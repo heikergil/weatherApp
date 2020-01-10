@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Now! App</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="nav">
+
+            <div id="logo" class="logo">
+                    <p id="cityName" class="cityName">Weather Now!</p>
+                    <p id="currentTime"></p>
+            </div>
+
+                
+
+            <div id="search" >
+                <form action="javascript:checkout()">
+                    <input id="cityInput" type="text"  placeholder="Search..">
+                    <button id="citysubmit" onclick="citySearch();"><i class="fa fa-search"></i></button>  
+                </form>
+            </div>
+
+        </nav>
+        <hr>
+<div class="mainInfo">
+        <div id="warning" >
+            <p id="warningText">In order to automatically show the weather in your city you need to give the browser permission to know your location or you can use the search option</p>
+        </div>
+
+        <div id="magicBox" class="hidden">
+
+            <div id="info" class="info ">
+                    <div onclick="unitConvertion();" class="tempDisplay infoDisplay">
+                    <div id="tempDisplay"  class=""></div>
+                    <p>°C/°F</p>
+                    </div>
+                <div id="iconContainer" class="infoDisplay">
+                    <img id="icon_logo" class="icon"  alt="weather icon">
+                    <p id="weatherDescription"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+        <div class="footer">
+            <p> desing and code by Heiker Gil</p>
+        </div>
+           
+        
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
