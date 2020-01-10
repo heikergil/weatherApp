@@ -114,7 +114,7 @@ function citySearch() {
 
   console.log(city);
   
-  let apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + '&units=metric' + '&appid='+ apiKey;
+  let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + '&units=metric' + '&appid='+ apiKey;
   console.log(apiUrl);
   fetch(apiUrl)
       .then(response => {
@@ -123,7 +123,7 @@ function citySearch() {
       .then(data => {
         // Work with JSON data here
         console.log(data)
-        const iconImg = "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+        const iconImg = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
         unitsCelcius = true;
         const tempeture = parseInt(data.main.temp) + '°C';
         const city = data.name + ',' + data.sys.country;
